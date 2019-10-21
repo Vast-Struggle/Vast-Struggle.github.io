@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mysql第二节课 | Hexo</title>
+  <title>Mysql第三次课 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="/*Mysql第二次课数据库的设计规范    数据库的设计的三大范式      第一范式：         表中的字段都是不可分割的最小的数据单元      第二范式：         每张表只能描述一件事情，         每张表都要有主键      第三范式：         非主键字段，要依赖于主键字段         换句话说，非主键字段与主键字段直接相关    注意：在设计表时，尽可能">
+  <meta name="description" content="/*Myaql第三次课    order by  排序    group by  把表分组    group by…having…分组并筛选符合条件的组子查询    查询语句里边嵌套查询语句    子查询的结果作为了外部查询的条件 连接  把多张表连接成一张表  一般连接有主外键关系的表连接分类：  普通连接：  内连接:inner join…on…    inner join用内连接方式连接两张">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql第二节课">
-<meta property="og:url" content="http://yoursite.com/2019/10/21/Mysql第二节课/index.html">
+<meta property="og:title" content="Mysql第三次课">
+<meta property="og:url" content="http://yoursite.com/2019/10/21/Mysql第三次课/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="/*Mysql第二次课数据库的设计规范    数据库的设计的三大范式      第一范式：         表中的字段都是不可分割的最小的数据单元      第二范式：         每张表只能描述一件事情，         每张表都要有主键      第三范式：         非主键字段，要依赖于主键字段         换句话说，非主键字段与主键字段直接相关    注意：在设计表时，尽可能">
+<meta property="og:description" content="/*Myaql第三次课    order by  排序    group by  把表分组    group by…having…分组并筛选符合条件的组子查询    查询语句里边嵌套查询语句    子查询的结果作为了外部查询的条件 连接  把多张表连接成一张表  一般连接有主外键关系的表连接分类：  普通连接：  内连接:inner join…on…    inner join用内连接方式连接两张">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-21T05:15:24.272Z">
+<meta property="og:updated_time" content="2019-10-21T05:35:32.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql第二节课">
-<meta name="twitter:description" content="/*Mysql第二次课数据库的设计规范    数据库的设计的三大范式      第一范式：         表中的字段都是不可分割的最小的数据单元      第二范式：         每张表只能描述一件事情，         每张表都要有主键      第三范式：         非主键字段，要依赖于主键字段         换句话说，非主键字段与主键字段直接相关    注意：在设计表时，尽可能">
+<meta name="twitter:title" content="Mysql第三次课">
+<meta name="twitter:description" content="/*Myaql第三次课    order by  排序    group by  把表分组    group by…having…分组并筛选符合条件的组子查询    查询语句里边嵌套查询语句    子查询的结果作为了外部查询的条件 连接  把多张表连接成一张表  一般连接有主外键关系的表连接分类：  普通连接：  内连接:inner join…on…    inner join用内连接方式连接两张">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,36 +154,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mysql第二节课" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mysql第三次课" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Mysql第二节课
+      Mysql第三次课
     </h1>
   
 
         
-        <a href="/2019/10/21/Mysql第二节课/" class="archive-article-date">
-  	<time datetime="2019-10-21T05:05:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
+        <a href="/2019/10/21/Mysql第三次课/" class="archive-article-date">
+  	<time datetime="2019-10-21T05:35:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>/*Mysql第二次课<br>数据库的设计规范<br>    数据库的设计的三大范式<br>      第一范式：<br>         表中的字段都是不可分割的最小的数据单元<br>      第二范式：<br>         每张表只能描述一件事情，<br>         每张表都要有主键<br>      第三范式：<br>         非主键字段，要依赖于主键字段<br>         换句话说，非主键字段与主键字段直接相关<br>    注意：在设计表时，尽可能依照三大范式，但有的时候为了性能，会牺牲范式</p>
-<p>Mysql运算符<br>    算术运算符<br>      + - * /<br>    逻辑运算符<br>      and(与) or(或) !(非)<br>    比较运算符<br>      &gt; &lt; &gt;= &lt;= &lt;&gt;(不等于) !=(不等于)</p>
-<p>聚合函数<br>   count() 求行数<br>   sum()   求一列的和<br>   avg()   求平均值<br>   max()   求最大值<br>   min()   求最小值</p>
-<p>Mysql常用关键字</p>
-<p>in    查询在什么什么选项中的数据<br>    where name in(‘张三’,’李四’)<br>    把name等于张三，等于李四的都查询出来<br>not in    where name not in(‘张三’,’李四’)<br>    把name不等于张三，等于李四的都查询出来</p>
-<p>distinct    去重</p>
-<p>limit        查询出表的前几行<br>between…and..    查询什么什么范围之间的数据<br>as    给字段取别名。<br>union 查询两张表的并集</p>
-<p>*/<br>CREATE TABLE goods(<br>   gid INT PRIMARY KEY,#把gid设置表的主键</p>
-<p>   gnam VARCHAR(100),<br>   gprice FLOAT<br>)<br>INSERT INTO goods(gnam,gprice) VALUES(‘吹风机’,82);<br>INSERT INTO goods(gnam,gprice) VALUES(‘外套’,200);<br>INSERT INTO goods(gnam,gprice) VALUES(‘台灯’,25);<br>INSERT INTO goods(gnam,gprice) VALUES(‘眼镜’,160);<br>INSERT INTO goods(gnam,gprice) VALUES(‘雨伞’,8);<br>SELECT * FROM goods;</p>
-<p>#查询出商品价格大于10的商品<br>SELECT * FROM goods WHERE gprice&gt;10;<br>#查询商品价格不等于10的商品信息<br>SELECT * FROM goods WHERE gprice&lt;&gt;10;<br>#查询商品价格大于10并且小于50的商品信息<br>SELECT * FROM goods WHERE gprice&gt;10 AND gprice&lt;50;<br>#查询出商品的数量<br>#字段名 as 新字段名 给列名重命名成新的列名<br>SELECT COUNT(*) AS ‘总数量’ FROM goods;<br>#查询商品的总价格<br>SELECT SUM(gprice) ‘总价格’ FROM goods;<br>#查询商品的平均价格<br>SELECT AVG(gprice) ‘平均价格’ FROM goods;<br>#查询商品的最高价格<br>SELECT MAX(gprice) ‘最高价格’ FROM goods;<br>#查询商品的最低价格<br>SELECT MIN(gprice) ‘最低价格’ FROM goods;<br>#查询出商品名称是雨伞，眼镜的都查询出来<br>SELECT * FROM goods WHERE gnam IN(‘雨伞’,’眼镜’);<br>#查询出商品名称不是雨伞，眼镜的都查询出来<br>SELECT * FROM goods WHERE gnam  NOT IN(‘雨伞’,’眼镜’);<br>#把商品名字重复的去掉<br>SELECT DISTINCT gnam FROM goods;<br>#查询表中的前两行<br>#limit 0,2:  0是行的下标，2是行数，表的行的下标是由0开始的<br>SELECT * FROM goods LIMIT 0,2;<br>#查询商品价格大于10小于50的商品信息<br>SELECT * FROM goods WHERE gprice BETWEEN 10 AND 50;</p>
+        <p>/*<br>Myaql第三次课<br>    order by  排序<br>    group by  把表分组<br>    group by…having…分组并筛选符合条件的组<br>子查询<br>    查询语句里边嵌套查询语句<br>    子查询的结果作为了外部查询的条件</p>
+<p>连接<br>  把多张表连接成一张表<br>  一般连接有主外键关系的表<br>连接分类：<br>  普通连接：<br>  内连接:inner join…on…<br>    inner join用内连接方式连接两张表<br>    on 后边写的是条件<br>  外连接（左连接与右连接）<br>      左连接：left join..on..<br>          左边的表显示所有数据，右边的表只显示匹配上的数据<br>      右连接：right join..on..<br>          右边的表显示所有数据，左边的表只显示匹配上的数据<br>  全连接：左右边都显示</p>
+<p>*/<br>CREATE DATABASE schooldb;<br>USE schooldb;<br>#教师表<br>CREATE TABLE teacher(<br>    tid INT PRIMARY KEY AUTO_INCREMENT,<br>    tnam VARCHAR(20) NOT NULL,<br>    hiredate DATE,<br>    sex VARCHAR(5)<br>)</p>
+<p>#班级信息表<br>CREATE TABLE classInfo(<br>    cid INT PRIMARY KEY AUTO_INCREMENT,<br>    cnam VARCHAR(20) NOT NULL,<br>    grid INT,#年级编号<br>    beginyear VARCHAR(20)<br>)</p>
+<p>#成绩表<br>CREATE TABLE score(<br>scid INT PRIMARY KEY AUTO_INCREMENT,<br>sid INT,#学生学号<br>coid INT,#课程编号<br>score INT,<br>remark VARCHAR(100)#备注<br>)</p>
+<p>#课程表<br>CREATE TABLE course(<br>coid INT PRIMARY KEY AUTO_INCREMENT,<br>cnam VARCHAR(50) NOT NULL,#课程名<br>tid INT#讲授老师编号<br>)</p>
+<p>#年级表<br>CREATE TABLE grade(<br>gid INT PRIMARY KEY AUTO_INCREMENT,<br>gnam VARCHAR(50),#年级名<br>major VARCHAR(100)#专业<br>)</p>
+<p>#学生信息表<br>CREATE TABLE studentInfo(<br>sid INT PRIMARY KEY AUTO_INCREMENT,<br>snam VARCHAR(20) NOT NULL,<br>sex VARCHAR(5),<br>age INT,<br>birthday DATE,<br>cid INT,#班级编号<br>beginyear VARCHAR(20),<br>stel VARCHAR(15),<br>address VARCHAR(100),<br>email VARCHAR(50)<br>)</p>
+<p>#一次性插入多条语句<br>#为教师表插入数据<br>INSERT INTO teacher(tnam,hiredate,sex)<br>VALUES(‘张三’,’2017-09-01’,’男’),<br>(‘李四’,’2017-10-01’,’男’),<br>(‘王五’,’2017-11-01’,’男’);</p>
+<p>#为班级表插入数据<br>INSERT INTO classInfo(cnam,grid,beginyear)<br>VALUES(‘软信4’,1,’2018’),<br>(‘软信4’,2,’2018’),(‘软信4’,3,’2018’);</p>
+<p>#为课程表插入数据<br>INSERT INTO course(cnam,tid)<br>VALUES(‘计算机基础’,1),(‘前端基础’,2),<br>(‘java基础’,3),(‘js基础’,3);</p>
+<p>#为学生信息表插入数据<br>INSERT INTO studentInfo(snam,sex,age,birthday,<br>cid,beginyear,stel,address,email)<br>VALUES(‘崔毅’,’男’,18,’2001-07-05’,1,’2018’,’18899999999’,<br>‘河南省新乡市’,‘1454536769@qq.com’),<br>(‘丁二’,’男’,19,’2001-07-05’,2,’2018’,’18899997777’,<br>‘河南省南阳市’,‘1454536769@qq.com’),<br>(‘周三’,’男’,20,’2001-07-05’,3,’2018’,’18899995555’,<br>‘河南省周口市’,‘1454536769@qq.com’),<br>(‘丁三’,’男’,17,’2001-07-05’,4,’2018’,’18899996666’,<br>‘河南省郑州市’,‘1454536769@qq.com’);</p>
+<p>INSERT INTO studentInfo(snam,sex,age,birthday,<br>cid,beginyear,stel,address,email)<br>VALUES(‘周四’,’女’,18,’2001-07-05’,1,’2018’,’18899999999’,<br>‘河南省南阳市’,‘1454536769@qq.com’);</p>
+<p>#为年级表插入数据<br>INSERT INTO grade(gnam,major)<br>VALUE(‘18级’,’软信’),(‘17级’,’软信’),<br>(‘19级’,’软信’),(‘16级’,’软信’);</p>
+<p>#为成绩表插入数据<br>INSERT INTO score(sid,coid,score,remark)<br>VALUE(1,1,90,’无’),(1,2,89,’无’),(1,3,99,’无’),(1,4,97,’无’),<br>(2,1,77,’无’),(2,2,44,’无’),(2,3,78,’无’),(2,4,97,’无’),<br>(3,1,89,’无’),(3,2,67,’无’),(3,3,79,’无’),<br>(4,1,77,’无’),(4,2,66,’无’),(4,3,78,’无’),(4,4,97,’无’);</p>
+<p>#order by排序<br>#把学生信息表（studentInfo）按年纪从小到大排序<br>SELECT * FROM studentInfo ORDER BY age ASC;<br>#把学生信息表（studentInfo）按年纪从大到小排序<br>SELECT * FROM studentInfo ORDER BY age DESC;<br>#group by分组<br>#把某张表按照某个字段进行分组<br>#查询出每个学生的平均成绩，结尾要显示的字段为，学生学号，平均成绩<br>SELECT sid,AVG(score) ‘平均成绩’ FROM score GROUP BY sid;<br>#group by…having…筛选出来符合条件的组<br>#查询出全部及格学生的平均成绩<br>SELECT sid,AVG(score) ‘avg’ FROM score GROUP BY sid HAVING MIN(score)&gt;60;<br>#查询出考试门数不够四门的学生学号<br>SELECT sid FROM score GROUP BY sid HAVING COUNT(*)&lt;4;</p>
+<p>#查询出“计算机基础”的成绩<br>SELECT coid,score FROM score WHERE coid=(<br>SELECT coid FROM course WHERE cnam=’计算机基础’<br>);<br>#查询出每门课的平均成绩<br>SELECT coid,AVG(score) ‘平均成绩’ FROM score GROUP BY coid;<br>#查询出“周三”学生的平均成绩<br>SELECT AVG(score) ‘平均成绩’ FROM score WHERE sid=(<br>SELECT sid FROM studentInfo WHERE snam=’周三’<br>);</p>
+<p>#连接<br>#普通连接<br>SELECT * FROM studentinfo s,score c WHERE s.sid=c.sid;<br>#查询出每个人的平均成绩，要显示的字段为姓名，平均成绩<br>SELECT snam,AVG(score)FROM studentinfo s,score c WHERE s.sid=c.sid GROUP BY snam;<br>SELECT snam,AVG(score)FROM studentinfo s,score c WHERE s.sid=c.sid GROUP BY s.sid;</p>
+<p>#内连接<br>SELECT * FROM studentinfo s INNER JOIN score c ON s.sid=c.sid;<br>SELECT snam,AVG(score)FROM studentinfo s INNER JOIN score c ON s.sid = c.sid GROUP BY s.sid;</p>
+<p>#左连接</p>
+<p>#查询出有不及格成绩的学生信息，缺考算不及格<br>SELECT <em>FROM studentinfo WHERE sid IN(SELECT sid FROM score GROUP BY sid HAVING<br>MIN(score)&lt;60 UNION SELECT sid FROM score GROUP BY sid<br>HAVING COUNT(</em>)&lt;(SELECT COUNT(*) FROM course));</p>
+<p>/*<br>anme    class    grsde<br>张三    语文      89<br>张三    数学      78<br>李四    语文      90<br>李四    数学      81<br>王五    语文      80<br>王五    数学      79<br>王五    英语      88</p>
+<p>*/<br>SELECT name1 FROM students GROUP BY name1 HAVING MIN(grade&gt;80);<br>SELECT name1 FROM studentd WHERE name1 NOT IN(SELECT name1 FROM students WHERE grade&lt;80);</p>
 
       
 
@@ -263,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/21/Mysql第二节课/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/21/Mysql第三次课/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -277,18 +290,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/21/Mysql第三次课/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Mysql第三次课
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/21/Mysql第一节课/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mysql第一节课</div>
+    <a href="/2019/10/21/Mysql第二节课/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mysql第二节课</div>
       <i class="icon-circle-right"></i>
     </a>
   

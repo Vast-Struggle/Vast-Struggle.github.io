@@ -152,27 +152,50 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Mysql第三节课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mysql第三次课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/Mysql第三节课/">Mysql第三节课</a>
+      <a class="article-title" href="/2019/10/21/Mysql第三次课/">Mysql第三次课</a>
     </h1>
   
 
         
-        <a href="/2019/10/21/Mysql第三节课/" class="archive-article-date">
-  	<time datetime="2019-10-21T05:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
+        <a href="/2019/10/21/Mysql第三次课/" class="archive-article-date">
+  	<time datetime="2019-10-21T05:35:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>/*<br>Myaql第三次课<br>    order by  排序<br>    group by  把表分组<br>    group by…having…分组并筛选符合条件的组<br>子查询<br>    查询语句里边嵌套查询语句<br>    子查询的结果作为了外部查询的条件</p>
+<p>连接<br>  把多张表连接成一张表<br>  一般连接有主外键关系的表<br>连接分类：<br>  普通连接：<br>  内连接:inner join…on…<br>    inner join用内连接方式连接两张表<br>    on 后边写的是条件<br>  外连接（左连接与右连接）<br>      左连接：left join..on..<br>          左边的表显示所有数据，右边的表只显示匹配上的数据<br>      右连接：right join..on..<br>          右边的表显示所有数据，左边的表只显示匹配上的数据<br>  全连接：左右边都显示</p>
+<p>*/<br>CREATE DATABASE schooldb;<br>USE schooldb;<br>#教师表<br>CREATE TABLE teacher(<br>    tid INT PRIMARY KEY AUTO_INCREMENT,<br>    tnam VARCHAR(20) NOT NULL,<br>    hiredate DATE,<br>    sex VARCHAR(5)<br>)</p>
+<p>#班级信息表<br>CREATE TABLE classInfo(<br>    cid INT PRIMARY KEY AUTO_INCREMENT,<br>    cnam VARCHAR(20) NOT NULL,<br>    grid INT,#年级编号<br>    beginyear VARCHAR(20)<br>)</p>
+<p>#成绩表<br>CREATE TABLE score(<br>scid INT PRIMARY KEY AUTO_INCREMENT,<br>sid INT,#学生学号<br>coid INT,#课程编号<br>score INT,<br>remark VARCHAR(100)#备注<br>)</p>
+<p>#课程表<br>CREATE TABLE course(<br>coid INT PRIMARY KEY AUTO_INCREMENT,<br>cnam VARCHAR(50) NOT NULL,#课程名<br>tid INT#讲授老师编号<br>)</p>
+<p>#年级表<br>CREATE TABLE grade(<br>gid INT PRIMARY KEY AUTO_INCREMENT,<br>gnam VARCHAR(50),#年级名<br>major VARCHAR(100)#专业<br>)</p>
+<p>#学生信息表<br>CREATE TABLE studentInfo(<br>sid INT PRIMARY KEY AUTO_INCREMENT,<br>snam VARCHAR(20) NOT NULL,<br>sex VARCHAR(5),<br>age INT,<br>birthday DATE,<br>cid INT,#班级编号<br>beginyear VARCHAR(20),<br>stel VARCHAR(15),<br>address VARCHAR(100),<br>email VARCHAR(50)<br>)</p>
+<p>#一次性插入多条语句<br>#为教师表插入数据<br>INSERT INTO teacher(tnam,hiredate,sex)<br>VALUES(‘张三’,’2017-09-01’,’男’),<br>(‘李四’,’2017-10-01’,’男’),<br>(‘王五’,’2017-11-01’,’男’);</p>
+<p>#为班级表插入数据<br>INSERT INTO classInfo(cnam,grid,beginyear)<br>VALUES(‘软信4’,1,’2018’),<br>(‘软信4’,2,’2018’),(‘软信4’,3,’2018’);</p>
+<p>#为课程表插入数据<br>INSERT INTO course(cnam,tid)<br>VALUES(‘计算机基础’,1),(‘前端基础’,2),<br>(‘java基础’,3),(‘js基础’,3);</p>
+<p>#为学生信息表插入数据<br>INSERT INTO studentInfo(snam,sex,age,birthday,<br>cid,beginyear,stel,address,email)<br>VALUES(‘崔毅’,’男’,18,’2001-07-05’,1,’2018’,’18899999999’,<br>‘河南省新乡市’,‘1454536769@qq.com’),<br>(‘丁二’,’男’,19,’2001-07-05’,2,’2018’,’18899997777’,<br>‘河南省南阳市’,‘1454536769@qq.com’),<br>(‘周三’,’男’,20,’2001-07-05’,3,’2018’,’18899995555’,<br>‘河南省周口市’,‘1454536769@qq.com’),<br>(‘丁三’,’男’,17,’2001-07-05’,4,’2018’,’18899996666’,<br>‘河南省郑州市’,‘1454536769@qq.com’);</p>
+<p>INSERT INTO studentInfo(snam,sex,age,birthday,<br>cid,beginyear,stel,address,email)<br>VALUES(‘周四’,’女’,18,’2001-07-05’,1,’2018’,’18899999999’,<br>‘河南省南阳市’,‘1454536769@qq.com’);</p>
+<p>#为年级表插入数据<br>INSERT INTO grade(gnam,major)<br>VALUE(‘18级’,’软信’),(‘17级’,’软信’),<br>(‘19级’,’软信’),(‘16级’,’软信’);</p>
+<p>#为成绩表插入数据<br>INSERT INTO score(sid,coid,score,remark)<br>VALUE(1,1,90,’无’),(1,2,89,’无’),(1,3,99,’无’),(1,4,97,’无’),<br>(2,1,77,’无’),(2,2,44,’无’),(2,3,78,’无’),(2,4,97,’无’),<br>(3,1,89,’无’),(3,2,67,’无’),(3,3,79,’无’),<br>(4,1,77,’无’),(4,2,66,’无’),(4,3,78,’无’),(4,4,97,’无’);</p>
+<p>#order by排序<br>#把学生信息表（studentInfo）按年纪从小到大排序<br>SELECT * FROM studentInfo ORDER BY age ASC;<br>#把学生信息表（studentInfo）按年纪从大到小排序<br>SELECT * FROM studentInfo ORDER BY age DESC;<br>#group by分组<br>#把某张表按照某个字段进行分组<br>#查询出每个学生的平均成绩，结尾要显示的字段为，学生学号，平均成绩<br>SELECT sid,AVG(score) ‘平均成绩’ FROM score GROUP BY sid;<br>#group by…having…筛选出来符合条件的组<br>#查询出全部及格学生的平均成绩<br>SELECT sid,AVG(score) ‘avg’ FROM score GROUP BY sid HAVING MIN(score)&gt;60;<br>#查询出考试门数不够四门的学生学号<br>SELECT sid FROM score GROUP BY sid HAVING COUNT(*)&lt;4;</p>
+<p>#查询出“计算机基础”的成绩<br>SELECT coid,score FROM score WHERE coid=(<br>SELECT coid FROM course WHERE cnam=’计算机基础’<br>);<br>#查询出每门课的平均成绩<br>SELECT coid,AVG(score) ‘平均成绩’ FROM score GROUP BY coid;<br>#查询出“周三”学生的平均成绩<br>SELECT AVG(score) ‘平均成绩’ FROM score WHERE sid=(<br>SELECT sid FROM studentInfo WHERE snam=’周三’<br>);</p>
+<p>#连接<br>#普通连接<br>SELECT * FROM studentinfo s,score c WHERE s.sid=c.sid;<br>#查询出每个人的平均成绩，要显示的字段为姓名，平均成绩<br>SELECT snam,AVG(score)FROM studentinfo s,score c WHERE s.sid=c.sid GROUP BY snam;<br>SELECT snam,AVG(score)FROM studentinfo s,score c WHERE s.sid=c.sid GROUP BY s.sid;</p>
+<p>#内连接<br>SELECT * FROM studentinfo s INNER JOIN score c ON s.sid=c.sid;<br>SELECT snam,AVG(score)FROM studentinfo s INNER JOIN score c ON s.sid = c.sid GROUP BY s.sid;</p>
+<p>#左连接</p>
+<p>#查询出有不及格成绩的学生信息，缺考算不及格<br>SELECT <em>FROM studentinfo WHERE sid IN(SELECT sid FROM score GROUP BY sid HAVING<br>MIN(score)&lt;60 UNION SELECT sid FROM score GROUP BY sid<br>HAVING COUNT(</em>)&lt;(SELECT COUNT(*) FROM course));</p>
+<p>/*<br>anme    class    grsde<br>张三    语文      89<br>张三    数学      78<br>李四    语文      90<br>李四    数学      81<br>王五    语文      80<br>王五    数学      79<br>王五    英语      88</p>
+<p>*/<br>SELECT name1 FROM students GROUP BY name1 HAVING MIN(grade&gt;80);<br>SELECT name1 FROM studentd WHERE name1 NOT IN(SELECT name1 FROM students WHERE grade&lt;80);</p>
+
       
 
       
@@ -184,7 +207,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/21/Mysql第三节课/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/21/Mysql第三次课/">展开全文 >></a>
         </p>
       
 
