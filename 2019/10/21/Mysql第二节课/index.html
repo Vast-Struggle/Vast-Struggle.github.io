@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>Mysql第二节课 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="/*Mysql第二次课数据库的设计规范    数据库的设计的三大范式      第一范式：         表中的字段都是不可分割的最小的数据单元      第二范式：         每张表只能描述一件事情，         每张表都要有主键      第三范式：         非主键字段，要依赖于主键字段         换句话说，非主键字段与主键字段直接相关    注意：在设计表时，尽可能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql第二节课">
+<meta property="og:url" content="http://yoursite.com/2019/10/21/Mysql第二节课/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/*Mysql第二次课数据库的设计规范    数据库的设计的三大范式      第一范式：         表中的字段都是不可分割的最小的数据单元      第二范式：         每张表只能描述一件事情，         每张表都要有主键      第三范式：         非主键字段，要依赖于主键字段         换句话说，非主键字段与主键字段直接相关    注意：在设计表时，尽可能">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-21T05:06:05.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Mysql第二节课">
+<meta name="twitter:description" content="/*Mysql第二次课数据库的设计规范    数据库的设计的三大范式      第一范式：         表中的字段都是不可分割的最小的数据单元      第二范式：         每张表只能描述一件事情，         每张表都要有主键      第三范式：         非主键字段，要依赖于主键字段         换句话说，非主键字段与主键字段直接相关    注意：在设计表时，尽可能">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,130 +154,165 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Mysql第二节课" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Mysql第二节课
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/21/Mysql第二节课/" class="archive-article-date">
+
+        
+        <a href="/2019/10/21/Mysql第二节课/" class="archive-article-date">
   	<time datetime="2019-10-21T05:05:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/21/Mysql第二节课/">Mysql第二节课</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>/*Mysql第二次课<br>数据库的设计规范<br>    数据库的设计的三大范式<br>      第一范式：<br>         表中的字段都是不可分割的最小的数据单元<br>      第二范式：<br>         每张表只能描述一件事情，<br>         每张表都要有主键<br>      第三范式：<br>         非主键字段，要依赖于主键字段<br>         换句话说，非主键字段与主键字段直接相关<br>    注意：在设计表时，尽可能依照三大范式，但有的时候为了性能，会牺牲范式</p>
+<p>Mysql运算符<br>    算术运算符<br>      + - * /<br>    逻辑运算符<br>      and(与) or(或) !(非)<br>    比较运算符<br>      &gt; &lt; &gt;= &lt;= &lt;&gt;(不等于) !=(不等于)</p>
+<p>聚合函数<br>   count() 求行数<br>   sum()   求一列的和<br>   avg()   求平均值<br>   max()   求最大值<br>   min()   求最小值</p>
+<p>Mysql常用关键字</p>
+<p>in    查询在什么什么选项中的数据<br>    where name in(‘张三’,’李四’)<br>    把name等于张三，等于李四的都查询出来<br>not in    where name not in(‘张三’,’李四’)<br>    把name不等于张三，等于李四的都查询出来</p>
+<p>distinct    去重</p>
+<p>limit        查询出表的前几行<br>between…and..    查询什么什么范围之间的数据<br>as    给字段取别名。<br>union 查询两张表的并集</p>
+<p>*/<br>CREATE TABLE goods(<br>   gid INT PRIMARY KEY,#把gid设置表的主键</p>
+<p>   gnam VARCHAR(100),<br>   gprice FLOAT<br>)<br>INSERT INTO goods(gnam,gprice) VALUES(‘吹风机’,82);<br>INSERT INTO goods(gnam,gprice) VALUES(‘外套’,200);<br>INSERT INTO goods(gnam,gprice) VALUES(‘台灯’,25);<br>INSERT INTO goods(gnam,gprice) VALUES(‘眼镜’,160);<br>INSERT INTO goods(gnam,gprice) VALUES(‘雨伞’,8);<br>SELECT * FROM goods;</p>
+<p>#查询出商品价格大于10的商品<br>SELECT * FROM goods WHERE gprice&gt;10;<br>#查询商品价格不等于10的商品信息<br>SELECT * FROM goods WHERE gprice&lt;&gt;10;<br>#查询商品价格大于10并且小于50的商品信息<br>SELECT * FROM goods WHERE gprice&gt;10 AND gprice&lt;50;<br>#查询出商品的数量<br>#字段名 as 新字段名 给列名重命名成新的列名<br>SELECT COUNT(*) AS ‘总数量’ FROM goods;<br>#查询商品的总价格<br>SELECT SUM(gprice) ‘总价格’ FROM goods;<br>#查询商品的平均价格<br>SELECT AVG(gprice) ‘平均价格’ FROM goods;<br>#查询商品的最高价格<br>SELECT MAX(gprice) ‘最高价格’ FROM goods;<br>#查询商品的最低价格<br>SELECT MIN(gprice) ‘最低价格’ FROM goods;<br>#查询出商品名称是雨伞，眼镜的都查询出来<br>SELECT * FROM goods WHERE gnam IN(‘雨伞’,’眼镜’);<br>#查询出商品名称不是雨伞，眼镜的都查询出来<br>SELECT * FROM goods WHERE gnam  NOT IN(‘雨伞’,’眼镜’);<br>#把商品名字重复的去掉<br>SELECT DISTINCT gnam FROM goods;<br>#查询表中的前两行<br>#limit 0,2:  0是行的下标，2是行数，表的行的下标是由0开始的<br>SELECT * FROM goods LIMIT 0,2;<br>#查询商品价格大于10小于50的商品信息<br>SELECT * FROM goods WHERE gprice BETWEEN 10 AND 50;</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/21/Mysql第二节课/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/21/Mysql第一节课/" class="archive-article-date">
-  	<time datetime="2019-10-21T04:47:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/21/Mysql第一节课/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mysql第一节课</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/21/Mysql第一节课/">Mysql第一节课</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/web前端基础第一章/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:24:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/web前端基础第一章/">web前端基础第一章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T12:31:02.360Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -296,8 +335,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
